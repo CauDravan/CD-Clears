@@ -1,0 +1,44 @@
+:root{
+  --bg:#1a0e12; --panel:#27161a; --muted:#b7a9b0; --accent:#e91e63;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#eee;font-family:Inter,system-ui,Segoe UI,Arial;}
+.app{display:flex;height:100vh;padding:18px;gap:20px}
+
+/* left sidebar */
+.sidebar-left{
+  width:260px;background:linear-gradient(180deg,#2a131a,#39171f);padding:16px;border-radius:12px;
+  box-shadow:0 6px 20px rgba(0,0,0,.6);display:flex;flex-direction:column;gap:14px;
+}
+.profile{display:flex;gap:12px;align-items:flex-start}
+.profile-img{width:48px;height:48px;border-radius:10px;object-fit:cover}
+.profile-intro{flex:1;color:#ffd7ff;opacity:.95;padding:8px;border-radius:8px;background:linear-gradient(180deg,#a7166a,#ff1380);min-height:48px;font-size:13px}
+.profile-stats h3,.more-stats h3{margin:0 0 8px 0;color:var(--muted);font-size:13px}
+#perfList,#statList{display:flex;flex-direction:column;gap:8px}
+.stat-item{background:#24121a;padding:8px;border-radius:8px;font-size:13px;color:#ddd}
+
+/* main area */
+.main-area{flex:1;display:flex;flex-direction:column;gap:12px}
+.tabs{display:flex;gap:8px}
+.tab-btn{background:#ddd;color:#111;padding:8px 14px;border-radius:10px;border:none;cursor:pointer}
+.tab-btn.active{background:#eee;box-shadow:inset 0 -4px 0 rgba(0,0,0,.06)}
+.tab-panel{display:none;background:transparent;flex:1;overflow:auto}
+.tab-panel.active{display:block}
+.search-row{margin:8px 0}
+.search-row input{width:100%;padding:8px 10px;border-radius:8px;border:1px solid #444;background:#111;color:#fff}
+
+/* grid rows */
+.grid-container{display:flex;flex-direction:column;gap:10px}
+.data-row{display:flex;align-items:center;gap:12px;padding:10px;background:linear-gradient(180deg,#2d0f17,#3a0f1a);border-radius:10px;cursor:pointer}
+.icon-wrapper img.level-icon{width:64px;height:64px;border-radius:8px}
+.own-rate{min-width:90px;color:#fff}
+.game-name{flex:1;color:#fff;font-weight:600}
+
+/* type table rows */
+.type-row{display:flex;align-items:center;gap:10px;padding:10px;background:#24121a;border-radius:8px}
+.type-key{width:220px;font-weight:700;color:#ffd7ff}
+.type-stats{display:flex;gap:12px;color:#ddd}
+
+/* tooltip */
+.tooltip{position:fixed;background:#111;padding:8px 10px;border-radius:8px;color:#fff;border:1px solid rgba(255,255,255,.06);z-index:9999;pointer-events:none;max-width:320px}
+.hidden{display:none}
