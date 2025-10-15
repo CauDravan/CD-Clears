@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CD Clears — Dashboard</title>
+  <link rel="icon" type="image/png" href="sob_cat.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar-left">
+      <div class="profile">
+        <img src="profile_small.png" alt="profile" class="profile-img"/>
+        <div class="profile-intro" contenteditable="true">My introduction is here</div>
+      </div>
+
+      <section class="profile-stats">
+        <h3>Performance</h3>
+        <div id="perfList">
+          <!-- will be filled by JS -->
+        </div>
+      </section>
+
+      <section class="more-stats">
+        <h3>Stats</h3>
+        <div id="statList"></div>
+      </section>
+    </aside>
+
+    <main class="main-area">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="clears">My Clears</button>
+        <button class="tab-btn" data-tab="types">Type Stats</button>
+        <button class="tab-btn" data-tab="plan">Clear Plan</button>
+      </div>
+
+      <section id="tab-clears" class="tab-panel active">
+        <div class="search-row">
+          <input id="searchClears" placeholder="Search game name or (game=..., level=..., id=...)" />
+        </div>
+        <div id="dataContainer" class="grid-container"></div>
+      </section>
+
+      <section id="tab-types" class="tab-panel">
+        <div class="search-row">
+          <input id="searchTypes" placeholder="Search Type (ex: #pure-puzzle)"/>
+        </div>
+        <div id="typeContainer" class="grid-container"></div>
+      </section>
+
+      <section id="tab-plan" class="tab-panel">
+        <div class="search-row">
+          <input id="searchPlan" placeholder="Filter plan (ex: feeling=?, pri=2)"/>
+        </div>
+        <div id="planContainer" class="grid-container"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- tooltip -->
+  <div id="tooltip" class="tooltip hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
